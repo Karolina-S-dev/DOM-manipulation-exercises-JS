@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Lucky Dice" />
+    <link rel="manifest" href="img/favicons/site.webmanifest" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <title>Lucky Dice</title>
+</head>
+
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <img src="img/logo.png" alt="Lucky Dice logo">
+            <ul class="nav-links">
+                <li><a href="">Free inspection</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">About us</a></li>
+            </ul>
+            <ion-icon name="reorder-three" id="nav-burger"></ion-icon>
+        </nav>
+        <div class="hero-text">
+            <h1>Car trouble? We can help!</h1>
+            <p>Get a free quote today by visiting one of our branches.</p>
+        </div>
+    </header>
+    
+    <!-- SECTION PRICELIST-->
+    <section id="free-inspection">
+        <h2>Pricelist</h2>
+        <div class="pricelist-cards-container">
+            <div class="pricelist-card">
+                <div class="pop-up-window">
+                    <h3>Free</h3>
+                    <p class="tooltip">Don't hesitate! Call us 24/7.</p>
+                </div>
+                <div class="card-feature">
+                    <ion-icon name="construct-outline"></ion-icon>
+                    <p>Free Inspection</p>
+                </div>
+                <p class="card-item">Get a free one-time inspection and get acquainted with our services</p>
+                <div class="card-footer">
+                    <p>0$</p>
+                    <button class="btn btn-full">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="pricelist-card">
+                <h3>Standard</h3>
+                <div class="card-feature">
+                    <ion-icon name="construct-outline"></ion-icon>
+                    <p>Oil and filter check</p>
+                </div>
+                <div class="card-feature">
+                    <ion-icon name="build-outline"></ion-icon>
+                    <p>Deep engine inspection</p>
+                </div>
+                <div class="card-feature">
+                    <ion-icon name="battery-charging-outline"></ion-icon>
+                    <p>Electronics check-up</p>
+                </div>
+                <div class="card-footer">
+                    <p>50$/Month</p>
+                    <button class="btn btn-outline">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="pricelist-card">
+                <h3>Premium</h3>
+                <div class="pricelist-card-premium-features">
+                    <div class="card-col">
+                        <div class="card-feature">
+                            <ion-icon name="construct-outline"></ion-icon>
+                            <p>Oil and filter check</p>
+                        </div>
+                        <div class="card-feature">
+                            <ion-icon name="build-outline"></ion-icon>
+                            <p>Deep engine inspection</p>
+                        </div>
+                        <div class="card-feature">
+                            <ion-icon name="battery-charging-outline"></ion-icon>
+                            <p>Electronics check-up</p>
+                        </div>
+                    </div>
+                    <div class="card-col">
+                        <div class="card-feature">
+                            <ion-icon name="checkbox-outline"></ion-icon>
+                            <p>Monthly Check-in</p>
+                        </div>
+                        <div class="card-feature">
+                            <ion-icon name="build-outline"></ion-icon>
+                            <p>Pre-trip inspection</p>
+                        </div>
+                        <div class="card-feature">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                            <p>Yearly Maintenance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <p>100$/Month</p>
+                    <button class="btn btn-full">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT US-->
+    <section class="section-light" id="contact-us">
+        <h2>Contact us</h2>
+        <div class="contact-us-row">
+            <div class="contact-us-card-1">
+                <p class="branches-title">Our branches:</p>
+                <p>Branch 1: Address</p>
+                <p>Branch 2: Address</p>
+                <p>Branch 3: Address</p>
+                <p>Branch 4: Address</p>
+            </div>
+            <div class="contact-us-card-2">
+                <form>
+                    <div class="form">
+                        <div class="form-element">
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="Enter your name" id="name">
+                        </div>
+                        <div class="form-element">
+                            <label for="email">Email</label>
+                            <input type="text" placeholder="Enter your email" id="email">
+                        </div>
+                        <div class="form-element">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Type your message here:"></textarea>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button class="btn btn-full">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER-->
+    <footer id="about-us" >
+        <div class="footer-top">
+            <div class="footer-brand-row">
+                <img src="img/logo.png" alt="Lucky Dice logo">
+                <div class="footer-brand-info-col">
+                    <h4>Lucky Dice</h4>
+                    <p>professional car mechanic, whose mission is to help people in case of a car
+                        breakdown.</p>
+                </div>
+            </div>
+            <div class="footer-menu-contact-row">
+                <div class="footer-links-col">
+                    <h5>Menu</h5>
+                    <a href="">About us</a>
+                    <a href="">Meet us</a>
+                    <a href="">See our realizations</a>
+                </div>
+                <div class="footer-contact-col">
+                    <h5>Contact</h5>
+                    <div class="footer-item"><ion-icon name="mail-outline"></ion-icon>
+                        <a href="">contact@luckydice.com</a>
+                    </div>
+                    <div class="footer-item"><ion-icon name="call-outline"></ion-icon>
+                        <a href=""> 000-000-000</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>2025 © All rights reserved</p>
+            <a href="">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- ION ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- SCRIPTS -->
+    <script src="js/nav.js"></script>
+    
+    
+</body>
+
+</html>

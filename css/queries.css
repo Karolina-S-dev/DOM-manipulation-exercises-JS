@@ -1,0 +1,182 @@
+/* laptops and big tablets - 1024px - 1200px */
+@media only screen and (max-width: 1200px) {
+    /* for now nothing to change */
+}
+
+/* tablets 768px - 1023px */
+@media only screen and (max-width: 1023px) {
+
+    html,
+    body {
+        font-size: 9px;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    .nav-links {
+        gap: 4rem;
+    }
+
+    .branches-title {
+        font-size: 3rem;
+    }
+
+    .contact-us-row {
+        margin: 17rem auto 4rem auto;
+    }
+
+    .contact-us-card-1 {
+        font-size: 3rem;
+    }
+
+    .contact-us-card-1,
+    .contact-us-card-2 {
+        padding: 4rem 3rem;
+    }
+
+    footer {
+        padding: 4rem 3rem;
+    }
+
+    .footer-brand-row img {
+        max-width: 11rem;
+        max-height: 11rem;
+    }
+
+    h4 {
+        font-size: 3rem;
+    }
+
+    .footer-links-col a {
+        font-size: 1.5rem;
+    }
+
+    .footer-contact-col {
+        margin-left: 3rem;
+    }
+}
+
+/* mobile - phones */
+@media only screen and (max-width: 767px) {
+
+    html,
+    body {
+        font-size: 7px;
+    }
+
+    section {
+        padding: 4rem 3rem;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav ion-icon[name="reorder-three"] {
+        display: block;
+        font-size: 32px;
+    }
+
+    .nav-links {
+        opacity: 0;
+        position: absolute;
+        flex-direction: column;
+        top: 10rem;
+        align-items: flex-end;
+        right: 0rem;
+        transition: opacity 0.4s ease;
+        gap: 3rem;
+    }
+
+    .nav-links a {
+        padding: 1.5rem 2rem;
+    }
+
+    .hero-text {
+        margin-left: 3rem;
+    }
+
+    .contact-us-row {
+        margin: 10rem auto 0 auto;
+    }
+
+    .contact-us-card-1,
+    .contact-us-card-2 {
+        padding: 1.5rem 2.5rem;
+    }
+
+    .branches-title {
+        top: -8rem;
+    }
+
+    footer {
+        padding: 3rem 3rem;
+    }
+
+    .footer-top {
+        margin: 1rem auto 4rem auto;
+    }
+}
+
+/* adjustment for footer, direction: row->col */
+@media only screen and (max-width: 600px) {
+
+    .footer-top {
+        flex-direction: column;
+        margin: 1rem auto 3rem auto;
+    }
+
+    .footer-brand-row {
+        margin-bottom: 1rem;
+    }
+
+    .footer-brand-info-col {
+        max-width: 100%;
+    }
+
+    .footer-menu-contact-row {
+        margin: 0 auto 0 auto;
+        max-width: 44rem;
+    }
+
+    h5 {
+        font-size: 2.3rem;
+    }
+}
+
+/* solving a problem of gap disappearing in contact us section, footer adjustment */
+@media only screen and (max-width: 450px) {
+
+    .contact-us-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-links-col {
+        gap: 1.3rem;
+    }
+}
+
+/* small mobile - phones*/
+@media only screen and (max-width: 400px) {
+
+    .card-feature {
+        gap: 1rem;
+    }
+
+    .branches-title {
+        margin-top: 2rem;
+    }
+
+    footer {
+        padding: 2rem 3rem;
+    }
+
+    .footer-brand-row img {
+        max-width: 9rem;
+        max-height: 9rem;
+        gap: 0rem;
+    }
+}
