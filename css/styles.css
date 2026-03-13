@@ -523,3 +523,45 @@ a {
 .bigger {
   transform: scale(1.2);
 }
+
+/* -------------------------------- */
+/* SUBSCRIBE BUTTONS POP-UP WINDOWS */
+/* -------------------------------- */
+#button-free {
+  position: relative;
+}
+
+#button-standard {
+  position: relative;
+}
+
+#button-premium {
+  position: relative;
+}
+
+.message-box {
+  background-color: #f1ede4f8;
+  width: 50rem;
+  height: 30rem;
+  padding: 3rem;
+  border-radius: 3rem;
+  position: fixed;
+  position: absolute;
+  transform: translate(-50%, -120%);
+  left: 50%;
+  /* top: -20%; */
+  /* top: 50%;
+    transform: translate(-50%, -120%); centruje okno */
+  z-index: 10000; /* najwyższy priorytet */
+}
+
+.hidden {
+  display: none;
+}
+
+h6{
+  color: #000;
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 1rem;
+}

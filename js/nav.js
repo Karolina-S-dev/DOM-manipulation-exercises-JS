@@ -32,8 +32,8 @@ navBurger.addEventListener("click", () => {
 // });
 
 //  WERSJA Z ARRAY
-const navItems = document.querySelectorAll(".nav-links li");
-console.log(navItems);
+// const navItems = document.querySelectorAll(".nav-links li");
+// console.log(navItems);
 // /**/ const sectionsWithId = [
 //   "free-inspection",
 //   "free-inspection",
@@ -41,51 +41,69 @@ console.log(navItems);
 //   "about-us",
 // ];
 
-const sectionsWithId = [];
-navItems.forEach((item) => {
-  sectionsWithId.push(item.textContent.toLowerCase().replaceAll(" ","-"));
-});
-sectionsWithId[1]=sectionsWithId[0];
-console.log(sectionsWithId);
+// const sectionsWithId = [];
+// navItems.forEach((item) => {
+//   sectionsWithId.push(item.textContent.toLowerCase().replaceAll(" ", "-"));
+// });
+// sectionsWithId[1] = sectionsWithId[0];
+// console.log(sectionsWithId);
 
-navItems.forEach((item, index) => {
-  item.addEventListener("click", (event) => {
-    event.preventDefault();
-    if (item.classList.contains("bigger")) {
-      console.log("Zawieram klasę bigger");
-      item.classList.remove("bigger");
-    } else {
-      console.log("Nie zawieram klasy bigger");
-      item.classList.add("bigger");
-    }
-    /**/ const section = document.getElementById(sectionsWithId[index]);
-    /**/ section.scrollIntoView({ behavior: "smooth" });
-  });
-});
+// navItems.forEach((item, index) => {
+//   item.addEventListener("click", (event) => {
+//     event.preventDefault();
+//     if (item.classList.contains("bigger")) {
+//       console.log("Zawieram klasę bigger");
+//       item.classList.remove("bigger");
+//     } else {
+//       console.log("Nie zawieram klasy bigger");
+//       item.classList.add("bigger");
+//     }
+//     /**/ const section = document.getElementById(sectionsWithId[index]);
+//     /**/ section.scrollIntoView({ behavior: "smooth" });
+//   });
+// });
 
 // jezeli na element mamy 2 rozne zachowania ale uzaleznione od 1 typu eventu (np.click) to zawsze 1 eventlistener obwarunkowany
 
-// WERSJA Z OBIEKTEM - nieskończona
-// const navLinks2 = document.querySelectorAll(".nav-links li");
-// console.log(navLinks2);
+//-----------------------------------------------------------------
+//zad. po kliknięciu na każde subscribe wyskakuje okienko - wersja z array
+//-----------------------------------------------------------------
 
-// const sectionsWithId2 = {
-//   free: "free-inspection",
-//   pricing: "free-inspection",
-//   contact: "contact-us",
-//   about: "about-us",
-// };
+// zwraca Nodelist - który jest podobny do arraya ale nim nie jest
+const buttons = document.querySelectorAll(".card-footer .btn");
+console.log(buttons);
 
-// navLinks2.forEach((item) => {
-//   item.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     console.log("klik dziala");
-//     if (item.classList.contains("bigger")) {
-//       item.classList.remove("bigger");
-//     } else {
-//       item.classList.add("bigger");
-//     }
-//     const section2 = document.getElementById(sectionsWithId2.key);
-//     section2.scrollIntoView({ behavior: "smooth" });
-//   });
-// });
+// arraye z tekstem title i iext
+const titleContent = ["LOREM IPSUM", "LOREM lorem", "lorem ipsum lorem"];
+const textContent = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa ",
+  "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos ",
+];
+
+// utworzenie elementów DOM
+const messageBox = document.createElement("div");
+const title = document.createElement("h6");
+const text = document.createElement("p");
+// dodanie elementów do elementu messageBox
+messageBox.appendChild(title);
+messageBox.appendChild(text);
+// dodanie do elementu messageBox klas z css BEZ KROPKI!
+messageBox.classList.add("hidden", "message-box");
+
+buttons.forEach((button, i) => {
+  button.addEventListener("click", (event) => {
+    //event.target w tym przypadku element na który kliknął user
+    // dla każdego guzika inny title i text
+    title.textContent = titleContent[i];
+    text.textContent = textContent[i];
+
+    if (!button.contains(messageBox)) {
+      // dodanie elementu DOM do DOM strony button.appendChild()
+      button.appendChild(messageBox);
+      messageBox.classList.remove("hidden");
+    } else {
+      button.removeChild(messageBox);
+    }
+  });
+});
